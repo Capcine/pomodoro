@@ -1,0 +1,154 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(0, 31, 18);
+    font-family: "now";
+    
+}
+
+/* Timer */
+#container-time {
+    display: flex;
+    gap: 8px;
+    width: 30%;
+    height: 25%;
+    flex-direction: column;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Permet de centrer le timer en fonction de son propre centre*/ 
+}
+
+#queue-tomato {
+    background-image: url("../images/q-tomato.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    height: 30%;
+    width: 30%;
+    z-index: 1;
+
+
+
+}
+
+#timer {
+    flex: 1;
+    background: tomato;
+    border-radius: 32px;
+
+    font-size: 8vw;
+    font-family: "Bagel Fat One", cursive;
+    text-align: center;
+    line-height: 25vh; 
+    color: white;
+
+    
+}
+
+#play-button {
+    flex: 1;
+    border: none;
+    border-radius: 2px;
+
+    color: tomato;
+}
+
+/* Add time */
+#create-container {
+    margin: 10px;
+    display: flex; 
+    gap: 8px; /* espacement entre enfant*/
+    height: 30%;
+    width: 30%;
+}
+#time-input {
+    flex: 1; /* prend toute largeur, etendre le bloc a la div */
+    padding: 8px 16px;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+    background: tomato;
+    outline: solid 0px transparent; /* outline est une bordure qui entoure l'élément, ici on la rend invisible */
+    transition: all 200ms ease; 
+}
+#time-add {
+    background: tomato;
+    border: none;
+    border-radius: 6px;
+    width: 80px;
+    transition: all 200ms ease; /* transition permet de faire une transition fluide entre les deux états du bouton */
+    color: white;
+}
+#time-clear {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    transition: all 200ms ease; /* transition permet de faire une transition fluide entre les deux états du bouton */
+}
+
+/** Interaction et beau **/
+#time-input::placeholder { /* texte dans input */
+    color: white;
+    font-style: italic;
+}
+#time-add:hover { /* au survol */
+    background: rgb(178, 61, 40);
+    cursor: pointer;
+}
+
+#time-add:active { /* au clic */
+    background: white;
+    color: tomato;
+}
+
+#time-input:focus { /* lorsque élément sélectionné */
+    outline:solid 3px green;
+}
+
+
+
+
+
+/* Déco */
+
+.tomato {
+    background-image: url("../images/tomato.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+}
+#tomato-1 {
+    top: 60%;
+    left: 16%;
+}
+#tomato-2 {
+    top: 8%;
+    left: 61%;
+}
+#tomato-3 {
+    top: 67%;
+    left: 75%;
+}
+
+#text-japanease {
+    color: white;
+    text-align: end;
+    padding: 12px;
+    font-size: 200%;
+    font-family: "kosugi-maru", sans-serif;
+    
+}
